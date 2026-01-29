@@ -1,0 +1,113 @@
+body{
+    background-image: url("backgroundPagina.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+}
+
+
+
+h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.container{
+    width: 70%;
+    background-color: #1f1b1b25;
+    border-radius: 20px;
+    padding: center;
+    margin: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+
+}
+
+.factura, .historial{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+      
+      
+input{
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+table, th, td{
+    border: 1px solid rgba(23, 22, 22, 0.44);
+    padding: 8px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+button{
+    margin-top: 1px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#total{
+    margin-top: 20px;
+    font-family: 'Arial Black', Arial, sans-serif;
+    text-align: right;
+}
+
+.error{
+    color: red;
+    margin-top: 10px;
+}
+
+@media print{
+    button, .historial {
+        display: none;
+        
+    }
+    .no-print{
+        display: none;
+        
+    }
+    table{
+        border: none !important;
+        width: 100%;
+        
+    }
+
+      .container{
+        box-shadow: none;
+        background: white;
+      }
+      body{
+        background: #ffffff;
+      }
+
+    #totalFactura{
+        font-size: 20px;
+        font-weight: bold;
+    }
+  
+
+}
+
