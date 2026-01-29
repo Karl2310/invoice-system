@@ -1,113 +1,122 @@
 body{
-    background-image: url("backgroundPagina.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 30px;
+  background-image: url("backgroundPagina.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
 }
-
-
 
 h1{
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
 }
+
+
 .container{
-    width: 70%;
-    background-color: #1f1b1b25;
-    border-radius: 20px;
-    padding: center;
-    margin: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-
+  max-width: 1100px;
+    margin: 40px auto;
 }
 
-.factura, .historial{
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 20px;
-
+.factura,
+.historial{
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
 }
+
 
 label{
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
 }
-      
-      
-input{
-    width: 100%;
-    padding: 6px;
-    margin-top: 4px;
 
+input{
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
 }
+
+input:focus{
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.15rem rgba(13,110,253,.25);
+}
+
 
 table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
+th{
+  background-color: #f1f3f5;
+  font-weight: 600;
+}
 
-table, th, td{
-    border: 1px solid rgba(23, 22, 22, 0.44);
-    padding: 8px;
-    margin-top: 10px;
-    text-align: center;
+th, td{
+  padding: 10px;
+  text-align: center;
+}
+
+tr:hover{
+  background-color: #f8f9fa;
 }
 
 
 button{
-    margin-top: 1px;
-    padding: 8px 12px;
-    cursor: pointer;
+  border-radius: 8px;
 }
 
-#total{
-    margin-top: 20px;
-    font-family: 'Arial Black', Arial, sans-serif;
-    text-align: right;
+#totalFactura{
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
-.error{
-    color: red;
-    margin-top: 10px;
+
+#error{
+  font-weight: 500;
+}
+.titulo-print{
+  display: none;
 }
 
+/* PRINT */
 @media print{
-    button, .historial {
-        display: none;
-        
-    }
-    .no-print{
-        display: none;
-        
-    }
-    table{
-        border: none !important;
-        width: 100%;
-        
-    }
+  button, .historial, .no-print{
+    display: none !important;
+  }
+  .titulo-print{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
 
-      .container{
-        box-shadow: none;
-        background: white;
-      }
-      body{
-        background: #ffffff;
-      }
+  }
+  .titulo-factura{
+    display: none;
+  }
+  input{
+    border: none;
+    box-shadow: none;
+    pointer-events: none;
+  }
 
-    #totalFactura{
-        font-size: 20px;
-        font-weight: bold;
-    }
-  
+  body{
+    background: #ffffff;
+  }
 
+  .container{
+    box-shadow: none !important;
+  }
+
+  table{
+    border: none !important;
+  }
 }
-
