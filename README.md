@@ -7,8 +7,9 @@ Sistema de registro de facturas desarrollado en **HTML, CSS y JavaScript**, que 
 Este proyecto fue creado como práctica de desarrollo frontend y forma parte de mi portafolio.
 
 ## Demo
-[
-](https://karl2310.github.io/invoice-system/)---
+[ Ver proyecto](https://karl2310.github.io/invoice-system/)
+
+---
 
 ## 🚀 Funcionalidades
 
